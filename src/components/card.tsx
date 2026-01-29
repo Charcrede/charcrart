@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface TextCardProps {
     pageRef: React.RefObject<HTMLDivElement | null>;
@@ -19,12 +19,8 @@ export const TextCard: React.FC<TextCardProps> = ({
     texteSize,
     setTexteSize,
 }) => {
-    const scaleText = (baseSize: number, containerWidth: number, containerHeight: number, textWidth: number, textHeight: number) => {
-        const scale = Math.min(containerWidth / textWidth, containerHeight / textHeight);
-        return baseSize * scale;
-    };
     function useResponsiveFont(baseSize: number, pageRef: React.RefObject<HTMLDivElement | null>) {
-        const [fontSize, setFontSize] = React.useState(baseSize);
+        const [fontSize, setFontSize] = useState(baseSize);
 
         React.useEffect(() => {
             function updateFont() {
@@ -45,11 +41,9 @@ export const TextCard: React.FC<TextCardProps> = ({
             <img src={bgSrc} className="rounded-xl" alt="background1" />
             <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0"></div>
             <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 p-10 text-white flex flex-col gap-6 justify-center">
-                {jour && (
                     <p style={{ fontSize: `${useResponsiveFont(36, pageRef)}px` }} className=" font-blanka absolute top-[8%] left-[8%]">
                         Jour {jour}
                     </p>
-                )}
                 <h2 style={{ fontSize: `${useResponsiveFont(45, pageRef)}px` }} className="mb-4 font-blanka text-center left-[5%] right-[5%] absolute top-[20%]">{titre}</h2>
                 <p
                     style={{ fontSize: `${useResponsiveFont(texteSize, pageRef)}px` }}

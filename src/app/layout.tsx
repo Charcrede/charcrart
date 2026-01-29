@@ -42,7 +42,11 @@ export default function RootLayout({
   };
   return (
     <html lang="en">
-          <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b-2 border-[#693382]">
+
+      <body
+        className={`${inter.className} antialiased`}
+      >
+                  <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b-2 border-[#693382]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo / Home Link */}
         <Link
@@ -66,9 +70,6 @@ export default function RootLayout({
       </div>
 
     </header>
-      <body
-        className={`${inter.className} antialiased`}
-      >
         {children}
       </body>
     </html>
