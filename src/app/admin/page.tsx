@@ -74,7 +74,7 @@ export default function Login() {
           <h1 className="text-[#f0f0f0] text-2xl font-bold font-blanka">Termes  </h1>
           <button onClick={()=>{setShowTermForm(true)}} className="p-2 bg-[#693382] border-2 border-[#693382] text-white rounded hover:bg-white hover:text-[#693382] duration-500">Ajouter un terme</button>
         </div>
-        <div className=" grid grid-cols-4 gap-4 w-full">
+        <div className=" grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 w-full">
           {terms.map(term => (
             <div key={term.id} className="bg-[#f0f0f0] p-4 rounded-lg mb-4 relative">
               <span className={`${term.posted ? "bg-green-500" : "bg-red-500"} text-white px-1 font-semibold text-xs rounded absolute top-2 left-2`}>{term.posted ? "Traité" : "Non traité"}</span>
