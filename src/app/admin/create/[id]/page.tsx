@@ -130,30 +130,90 @@ export default function CreateCard() {
 
   return (
     <div className="bg-[#141414]">
-      <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 ">
-        <form action="" className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#f0f0f0] p-6 rounded-xl text-[#141414]">
-          <legend className="text-xl font-blanka text-center text-[#693382]">Terme : {terme?.term}</legend>
-          <div className="flex flex-col gap-4 w-full">
-            <label htmlFor="accroche" className="text-[#693382] text-xl">Phrase d'accroche</label>
-            <textarea className="border-2 border-gray-400 focus-visible:border-[#693382] focus-visible:outline-0 w-full p-2 rounded" id="accroche" value={accroche} onChange={(e) => setAccroche(e.target.value)} />
+      <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <form
+          action=""
+          className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-purple-200 text-[#141414]"
+        >
+          <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#693382] tracking-wide">
+            Terme : {terme?.term}
+          </legend>
 
-          </div>
-          <div className="flex flex-col gap-4 w-full">
-            <label htmlFor="def" className="text-[#693382] text-xl">Définition</label>
-            <textarea className="border-2 border-gray-400 focus-visible:border-[#693382] focus-visible:outline-0 w-full p-2 rounded" id="def" value={def} onChange={(e) => setDef(e.target.value)} />
-          </div>
-          <div className="flex flex-col gap-4 w-full">
-            <label htmlFor="exemple" className="text-[#693382] text-xl">Exemple concret</label>
-            <textarea className="border-2 border-gray-400 focus-visible:border-[#693382] focus-visible:outline-0 w-full p-2 rounded" id="exemple" value={exemple} onChange={(e) => setExemple(e.target.value)} />
-          </div>
-          <div className="flex flex-col gap-4 w-full">
-            <label htmlFor="aRetenir" className="text-[#693382] text-xl">A retenir</label>
-            <textarea className="border-2 border-gray-400 focus-visible:border-[#693382] focus-visible:outline-0 w-full p-2 rounded" id="aRetenir" value={aRetenir} onChange={(e) => setARetenir(e.target.value)} />
+          {/** Champ Texte */}
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="accroche"
+              className="text-[#693382] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#5a2c95]"
+            >
+              Phrase d'accroche
+            </label>
+            <textarea
+              id="accroche"
+              value={accroche}
+              onChange={(e) => setAccroche(e.target.value)}
+              placeholder="Entrez votre phrase d'accroche..."
+              className="border-2 border-gray-300 focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl shadow-sm transition-all duration-300 resize-none min-h-17.5"
+            />
           </div>
 
-          <button type="submit" className="bg-gray-600 text-white p-2 rounded hover:bg-gray-700 cursor-pointer">Voir un aperçu</button>
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="def"
+              className="text-[#693382] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#5a2c95]"
+            >
+              Définition
+            </label>
+            <textarea
+              id="def"
+              value={def}
+              onChange={(e) => setDef(e.target.value)}
+              placeholder="Définition simple du terme..."
+              className="border-2 border-gray-300 focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="exemple"
+              className="text-[#693382] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#5a2c95]"
+            >
+              Exemple concret
+            </label>
+            <textarea
+              id="exemple"
+              value={exemple}
+              onChange={(e) => setExemple(e.target.value)}
+              placeholder="Exemple concret d'utilisation..."
+              className="border-2 border-gray-300 focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="aRetenir"
+              className="text-[#693382] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#5a2c95]"
+            >
+              À retenir
+            </label>
+            <textarea
+              id="aRetenir"
+              value={aRetenir}
+              onChange={(e) => setARetenir(e.target.value)}
+              placeholder="Points essentiels à retenir..."
+              className="border-2 border-gray-300 focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          {/** Bouton */}
+          <button
+            type="submit"
+            className="mt-4 bg-linear-to-r from-[#693382] to-[#5a2c95] text-white font-semibold p-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            Voir un aperçu
+          </button>
         </form>
       </div>
+
 
       <div className="flex flex-nowrap gap-8 mx-2 lg:mx-64">
         <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
@@ -222,10 +282,19 @@ export default function CreateCard() {
           </button>
         ))}
       </div>
-      <div className="w-full h-16 text-2xl my-4 bg-white border border-black overflow-hidden rounded-lg relative group duration-500">
-        <div className="w-0 absolute top-0 right-0 bottom-0 left-0 group-hover:w-full duration-500 bg-black"></div>
-        <button onClick={() => { handleDownloadZip() }} className="duration-500 absolute top-0 right-0 bottom-0 left-0 p-2 group-hover:text-white text-black rounded flex items-center gap-2">Importer</button>
+      <div className="lg:h-16 h-12 my-4 relative rounded-lg bg-[#693382] mx-auto w-7/8 lg:w-1/2  overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-all duration-300">
+        {/* Overlay animé */}
+        <div className="absolute top-0 left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500 ease-in-out"></div>
+
+        {/* Bouton clickable */}
+        <button
+          onClick={() => handleDownloadZip()}
+          className="relative z-10 w-full h-full flex items-center justify-center gap-2  text-black group-hover:text-white font-semibold text-xl transition-colors duration-500"
+        >
+          Importer
+        </button>
       </div>
+
     </div >
   );
 }
