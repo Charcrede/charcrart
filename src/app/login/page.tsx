@@ -43,6 +43,7 @@ export default function Login() {
       localStorage.setItem("token", response.token);
       localStorage.setItem("expiresAt", response.expiresAt.toString());
       // Rediriger ou effectuer d'autres actions après une connexion réussie
+      router.push('/admin');
     } catch (err: any) {
       console.error("Erreur de connexion :", err.response?.data || err.message);
       setError(err.response?.data?.message || "Erreur de connexion");
