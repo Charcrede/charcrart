@@ -56,6 +56,7 @@ export const TextCard: React.FC<TextCardProps> = ({
                     </p>
                 </div>
 
+            </div>
                 <div className="flex flex-col gap-3 mt-4 justify-center bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-md">
                     <label
                         htmlFor="texteSize"
@@ -82,7 +83,6 @@ export const TextCard: React.FC<TextCardProps> = ({
                         <span className="text-gray-400">100px</span>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };
