@@ -20,7 +20,7 @@ export default function HomePage() {
 
   <div className="flex gap-4 mt-4 flex-wrap justify-center">
     <Link
-      href="/cards"
+      href="/card"
       className="px-6 py-3 rounded-xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
     >
       Créer sa propre carte
