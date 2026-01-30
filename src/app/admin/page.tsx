@@ -122,8 +122,8 @@ export default function Login() {
         </div>
       </div>
       {showTermForm && (
-        <div className="absolute top-0 bottom-0 right-0 left-0 backdrop-blur-2xl flex items-center justify-center">
-          <form onSubmit={handleSubmit} className="relative rounded-xl shadow lg:w-1/3 h-1/2.5 sm:w-full flex flex-col gap-6 bg-white p-6">
+        <div className="fixed top-0 bottom-0 right-0 left-0 backdrop-blur-2xl flex items-center justify-center z-20">
+          <form onSubmit={handleSubmit} className="relative rounded-xl shadow lg:w-1/3 h-1/2.5 sm:w-full flex flex-col gap-6 bg-white p-6 ">
             <button type="button" onClick={closeForm} className="absolute -top-5 shadow -right-5 group p-3 rounded-full bg-white"><X className="h-10 w-10 group-hover:text-[#693382] text-black" /></button>
             <legend className="text-xl text-center font-semibold text-[#693382] font-blanka">Ajouter un nouveau terme</legend>
             <div className="flex flex-col gap-4 w-full">

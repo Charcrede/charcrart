@@ -51,11 +51,9 @@ export const TextCard: React.FC<TextCardProps> = ({
                 )}
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0"></div>
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 p-10 text-white flex flex-col gap-6 justify-center">
-                    {config.showDay && (
                         <p style={{ fontSize: `${useResponsiveFont(36, pageRef)}px` }} className=" font-blanka absolute top-[8%] left-[8%]">
                             Jour {jour}
                         </p>
-                    )}
                     <h2 style={{ fontSize: `${useResponsiveFont(config.titleSize ? config.titleSize : 45, pageRef)}px` }} className="mb-4 font-blanka text-center left-[5%] right-[5%] absolute top-[20%]">{titre}</h2>
                     <p
                         style={{ fontSize: `${useResponsiveFont(texteSize, pageRef)}px` }}
@@ -63,12 +61,12 @@ export const TextCard: React.FC<TextCardProps> = ({
                     >
                         {texte}
                     </p>
-                    <p
+                    {/* <p
                         style={{ fontSize: `${useResponsiveFont(21, pageRef)}px` }}
                         className="font-poppins font-normal text-center left-[5%] text-gray-100 right-[5%] absolute bottom-[4.5%]"
                     >
                         {footer}
-                    </p>
+                    </p> */}
                 </div>
 
             </div>

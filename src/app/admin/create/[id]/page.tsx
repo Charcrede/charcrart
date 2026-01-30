@@ -9,6 +9,8 @@ import JSZip from "jszip";
 import { createTraitement } from "@/services/createTreatment";
 import { TextCard } from "@/components/card";
 import { CardConfig } from "@/types/cardConfig";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 export default function CreateCard() {
   const [terme, setTerme] = useState<Terme | null>(null);
@@ -102,7 +104,7 @@ export default function CreateCard() {
     for (let i = 0; i < pages.length; i++) {
       const element = pages[i].ref.current;
 
-      if (!element) continue; // si null → on skip
+      if (!element) continue;
 
       const dataUrl = await htmlToImage.toPng(element);
       const base64 = dataUrl.split(",")[1];
@@ -124,6 +126,14 @@ export default function CreateCard() {
       exemple,
       aRetenir,
     });
+
+    if (terme?.id) {
+      const termRef = doc(db, "terms", terme.id);
+
+      await updateDoc(termRef, {
+        posted: true,
+      });
+    }
 
     if (result.success) {
       alert(`Traitement créé avec ID: ${result.id}`);
