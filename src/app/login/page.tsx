@@ -17,10 +17,10 @@ export default function Login() {
   useEffect(() => {
     const checkLogin = async () => {
       const adminId = localStorage.getItem("id");
-      const token = localStorage.getItem("token");
+      const password = localStorage.getItem("password");
 
-      if (adminId && token) {
-        const result = await checkAdminLogin(adminId, token);
+      if (adminId && password) {
+        const result = await checkAdminLogin(adminId, password);
         if (result.status === "connected") {
           router.push('/admin');
         }
@@ -40,7 +40,7 @@ export default function Login() {
     try {
       const response = await loginAdmin(number, password);
       localStorage.setItem("id", response.adminId);
-      localStorage.setItem("token", response.token);
+      localStorage.setItem("password", response.password);
       localStorage.setItem("expiresAt", response.expiresAt.toString());
       // Rediriger ou effectuer d'autres actions après une connexion réussie
       router.push('/admin');

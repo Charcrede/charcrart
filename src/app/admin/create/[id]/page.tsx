@@ -38,10 +38,10 @@ export default function CreateCard() {
   useEffect(() => {
     const checkLogin = async () => {
       const adminId = localStorage.getItem("id");
-      const token = localStorage.getItem("token");
+      const password = localStorage.getItem("password");
 
-      if (adminId && token) {
-        const result = await checkAdminLogin(adminId, token);
+      if (adminId && password) {
+        const result = await checkAdminLogin(adminId, password);
         if (result.status === "not_connected") {
           router.push('/login');
         }

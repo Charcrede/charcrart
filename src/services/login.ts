@@ -17,7 +17,7 @@ export async function loginAdmin(numero: string, password: string) {
   console.log(adminsRef)
   const q = query(
     adminsRef,
-    where("numéro", "==", numero)
+    where("numero", "==", numero)
   );
 
   const snapshot = await getDocs(q);
@@ -43,7 +43,7 @@ export async function loginAdmin(numero: string, password: string) {
   });
 
   return {
-    token,
+    password: admin.password,
     expiresAt,
     adminId: adminDoc.id,
   };

@@ -7,10 +7,10 @@ type LoginStatus =
 
 export async function checkAdminLogin(
   adminId: string,
-  token: string
+  password: string
 ): Promise<LoginStatus> {
 
-  if (!adminId || !token) {
+  if (!adminId || !password) {
     return { status: "not_connected", reason: "missing_credentials" };
   }
 
@@ -24,7 +24,7 @@ export async function checkAdminLogin(
   const admin = adminSnap.data();
 
   // 🔐 Token mismatch
-  if (!admin.token || admin.token !== token) {
+  if (!admin.password || admin.password !== password) {
     return { status: "not_connected", reason: "invalid_token" };
   }
 
