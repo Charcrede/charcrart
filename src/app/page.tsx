@@ -23,15 +23,9 @@ export default function HomePage() {
       href="/card"
       className="px-6 py-3 rounded-xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
     >
-      Créer sa propre carte
-    </Link>
-
-    <Link
-      href="/admin"
-      className="px-6 py-3 rounded-xl border border-[#693382] text-[#693382] hover:bg-[#693382] hover:text-white transition-all"
-    >
       Créer une carte
     </Link>
+
   </div>
 </section>
 
