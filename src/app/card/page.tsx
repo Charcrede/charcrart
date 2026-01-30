@@ -75,7 +75,7 @@ export default function CreateCardForAll() {
                     className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#1f1f1f]/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#693382]/30 text-white"
                 >
                     <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#e0c7ff] tracking-wide">
-                        Page : {activePage}
+                        Carte
                     </legend>
 
                     {/** Champ Texte */}
@@ -135,13 +135,6 @@ export default function CreateCardForAll() {
                         >
                             Arrière plan
                         </p>
-                        {/* <textarea
-              id="aRetenir"
-              value={aRetenir}
-              onChange={(e) => setARetenir(e.target.value)}
-              placeholder="Points essentiels à retenir..."
-              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
-            /> */}
                         <div className="flex flex-col gap-4">
                             {/* Choix du type de fond */}
                             <div className="flex gap-3">
@@ -200,13 +193,6 @@ export default function CreateCardForAll() {
 
                     </div>
 
-                    {/** Bouton */}
-                    <button
-                        type="submit"
-                        className="mt-4 bg-linear-to-r from-[#693382] to-[#5a2c95] text-white font-semibold p-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-                    >
-                        Voir un aperçu
-                    </button>
                 </form>
 
             </div>
