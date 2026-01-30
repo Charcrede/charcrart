@@ -34,7 +34,7 @@ export default function CreateCard() {
 
   const config = {
     background: "image",
-    backgroundValue: "/bg4.png",
+    backgroundValue: "/bg.png",
     titleColor: "#ffffff",
     bodyColor: "#ffffff",
     showDay: false,
