@@ -20,10 +20,10 @@ export default function HomePage() {
 
   <div className="flex gap-4 mt-4 flex-wrap justify-center">
     <Link
-      href="/terms"
+      href="/cards"
       className="px-6 py-3 rounded-xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
     >
-      Explorer les cartes
+      Créer sa propre carte
     </Link>
 
     <Link
@@ -101,12 +101,12 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <StepCard
-            title="Un terme"
-            description="Un concept technique précis, sans jargon inutile."
+            title="Informations"
+            description="Ajouter le titre, le texte et le footer de la carte."
           />
           <StepCard
-            title="Une explication"
-            description="Définition simple, exemple concret, point clé."
+            title="Ajustements"
+            description="Personnaliser le fond, la taille du texte, etc."
           />
           <StepCard
             title="Une carte"
@@ -124,7 +124,7 @@ export default function HomePage() {
         </h2>
 
         <Link
-          href="/terms"
+          href="/card"
           className="inline-block mt-4 px-8 py-4 rounded-2xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
         >
           Commencer

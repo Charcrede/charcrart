@@ -13,7 +13,7 @@ interface TextCardProps {
     setTexteSize: (size: number) => void;
 }
 
-export const TextCard: React.FC<TextCardProps> = ({
+export const TextCardForAll: React.FC<TextCardProps> = ({
     pageRef,
     bgSrc,
     jour,
@@ -45,21 +45,21 @@ export const TextCard: React.FC<TextCardProps> = ({
         <div>
 
 
-            <div ref={pageRef} className="relative rounded-xl overflow-hidden">
+            <div ref={pageRef} className="relative rounded-xl overflow-hidden" style={{backgroundColor : config.background === "color" ? config.backgroundValue : undefined}}>
                 {config.background === "image" && (
-                    <img src={config.backgroundValue} className="rounded-xl" alt="background1" />
+                    <img src={config.backgroundValue} className="rounded-xl" alt="background1" onClick={()=>{console.log(config.backgroundValue)}}/>
                 )}
-                <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0"></div>
+                <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 bg-black opacity-70"></div>
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 p-10 text-white flex flex-col gap-6 justify-center">
                     {config.showDay && (
                         <p style={{ fontSize: `${useResponsiveFont(36, pageRef)}px` }} className=" font-blanka absolute top-[8%] left-[8%]">
                             Jour {jour}
                         </p>
                     )}
-                    <h2 style={{ fontSize: `${useResponsiveFont(config.titleSize ? config.titleSize : 45, pageRef)}px` }} className="mb-4 font-blanka text-center left-[5%] right-[5%] absolute top-[20%]">{titre}</h2>
+                    <h2 style={{ fontSize: `${useResponsiveFont(config.titleSize ? config.titleSize : 45, pageRef)}px` }} className="mb-4 font-blanka text-center left-[5%] right-[5%] absolute top-[10%]">{titre}</h2>
                     <p
                         style={{ fontSize: `${useResponsiveFont(texteSize, pageRef)}px` }}
-                        className="font-edusa font-normal text-center left-[5%] right-[5%] absolute top-[40%]"
+                        className="font-edusa font-normal text-center left-[5%] right-[5%] absolute top-[30%]"
                     >
                         {texte}
                     </p>

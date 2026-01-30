@@ -8,6 +8,7 @@ import * as htmlToImage from "html-to-image";
 import JSZip from "jszip";
 import { createTraitement } from "@/services/createTreatment";
 import { TextCard } from "@/components/card";
+import { CardConfig } from "@/types/cardConfig";
 
 export default function CreateCard() {
   const [terme, setTerme] = useState<Terme | null>(null);
@@ -30,6 +31,17 @@ export default function CreateCard() {
     { ref: page3Ref, name: "page-3.png" },
     { ref: page4Ref, name: "page-4.png" },
   ];
+
+  const config = {
+    background: "image",
+    backgroundValue: "/bg4.png",
+    titleColor: "#ffffff",
+    bodyColor: "#ffffff",
+    showDay: false,
+    titleSize: 45,
+    bodySize: 30,
+    align: "center"
+  } as CardConfig;
 
   const router = useRouter();
   const params = useParams();
@@ -127,87 +139,87 @@ export default function CreateCard() {
   return (
     <div className="bg-[#141414]">
       <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-          <form
-            action=""
-            className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#1f1f1f]/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#693382]/30 text-white"
-          >
-            <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#e0c7ff] tracking-wide">
-              Terme : {terme?.term}
-            </legend>
+        <form
+          action=""
+          className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#1f1f1f]/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#693382]/30 text-white"
+        >
+          <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#e0c7ff] tracking-wide">
+            Terme : {terme?.term}
+          </legend>
 
-            {/** Champ Texte */}
-            <div className="flex flex-col gap-1 w-full relative group">
-              <label
-                htmlFor="accroche"
-                className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
-              >
-                Phrase d'accroche
-              </label>
-              <textarea
-                id="accroche"
-                value={accroche}
-                onChange={(e) => setAccroche(e.target.value)}
-                placeholder="Entrez votre phrase d'accroche..."
-                className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-17.5"
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 w-full relative group">
-              <label
-                htmlFor="def"
-                className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
-              >
-                Définition
-              </label>
-              <textarea
-                id="def"
-                value={def}
-                onChange={(e) => setDef(e.target.value)}
-                placeholder="Définition simple du terme..."
-                className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 w-full relative group">
-              <label
-                htmlFor="exemple"
-                className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
-              >
-                Exemple concret
-              </label>
-              <textarea
-                id="exemple"
-                value={exemple}
-                onChange={(e) => setExemple(e.target.value)}
-                placeholder="Exemple concret d'utilisation..."
-                className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 w-full relative group">
-              <label
-                htmlFor="aRetenir"
-                className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
-              >
-                À retenir
-              </label>
-              <textarea
-                id="aRetenir"
-                value={aRetenir}
-                onChange={(e) => setARetenir(e.target.value)}
-                placeholder="Points essentiels à retenir..."
-                className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
-              />
-            </div>
-
-            {/** Bouton */}
-            <button
-              type="submit"
-              className="mt-4 bg-linear-to-r from-[#693382] to-[#5a2c95] text-white font-semibold p-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+          {/** Champ Texte */}
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="accroche"
+              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
             >
-              Voir un aperçu
-            </button>
-          </form>
+              Phrase d'accroche
+            </label>
+            <textarea
+              id="accroche"
+              value={accroche}
+              onChange={(e) => setAccroche(e.target.value)}
+              placeholder="Entrez votre phrase d'accroche..."
+              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-17.5"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="def"
+              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+            >
+              Définition
+            </label>
+            <textarea
+              id="def"
+              value={def}
+              onChange={(e) => setDef(e.target.value)}
+              placeholder="Définition simple du terme..."
+              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="exemple"
+              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+            >
+              Exemple concret
+            </label>
+            <textarea
+              id="exemple"
+              value={exemple}
+              onChange={(e) => setExemple(e.target.value)}
+              placeholder="Exemple concret d'utilisation..."
+              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 w-full relative group">
+            <label
+              htmlFor="aRetenir"
+              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+            >
+              À retenir
+            </label>
+            <textarea
+              id="aRetenir"
+              value={aRetenir}
+              onChange={(e) => setARetenir(e.target.value)}
+              placeholder="Points essentiels à retenir..."
+              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+            />
+          </div>
+
+          {/** Bouton */}
+          <button
+            type="submit"
+            className="mt-4 bg-linear-to-r from-[#693382] to-[#5a2c95] text-white font-semibold p-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            Voir un aperçu
+          </button>
+        </form>
 
       </div>
 
@@ -222,6 +234,8 @@ export default function CreateCard() {
             texte={accroche}
             texteSize={retSize}
             setTexteSize={setRetSize}
+            footer="#1JOUR1TERME"
+            config={config}
           />
 
         </div>
@@ -235,6 +249,8 @@ export default function CreateCard() {
             texte={def}
             texteSize={defSize}
             setTexteSize={setDefSize}
+            footer="#1JOUR1TERME"
+            config={config}
           />
         </div>
 
@@ -247,6 +263,8 @@ export default function CreateCard() {
             texte={exemple}
             texteSize={exSize}
             setTexteSize={setExSize}
+            footer="#1JOUR1TERME"
+            config={config}
           />
         </div>
 
@@ -259,6 +277,8 @@ export default function CreateCard() {
             texte={aRetenir}
             texteSize={retSize}
             setTexteSize={setRetSize}
+            footer="#1JOUR1TERME"
+            config={config}
           />
 
 
