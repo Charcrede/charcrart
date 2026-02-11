@@ -147,13 +147,13 @@ export default function CreateCard() {
 
 
   return (
-    <div className="bg-[#141414]">
-      <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className=" bg-linear-to-r from-[#07233b] to-[#050d17]">
+      <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 mt-8">
         <form
           action=""
-          className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#1f1f1f]/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#693382]/30 text-white"
+          className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#0788ff]/30 text-white"
         >
-          <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#e0c7ff] tracking-wide">
+          <legend className="text-2xl sm:text-3xl font-blanka text-center text-white tracking-wide">
             Terme : {terme?.term}
           </legend>
 
@@ -161,7 +161,7 @@ export default function CreateCard() {
           <div className="flex flex-col gap-1 w-full relative group">
             <label
               htmlFor="accroche"
-              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+              className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
             >
               Phrase d'accroche
             </label>
@@ -170,14 +170,14 @@ export default function CreateCard() {
               value={accroche}
               onChange={(e) => setAccroche(e.target.value)}
               placeholder="Entrez votre phrase d'accroche..."
-              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-17.5"
+              className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none min-h-17.5"
             />
           </div>
 
           <div className="flex flex-col gap-1 w-full relative group">
             <label
               htmlFor="def"
-              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+              className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
             >
               Définition
             </label>
@@ -186,14 +186,14 @@ export default function CreateCard() {
               value={def}
               onChange={(e) => setDef(e.target.value)}
               placeholder="Définition simple du terme..."
-              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+              className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none min-h-20"
             />
           </div>
 
           <div className="flex flex-col gap-1 w-full relative group">
             <label
               htmlFor="exemple"
-              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+              className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
             >
               Exemple concret
             </label>
@@ -202,14 +202,14 @@ export default function CreateCard() {
               value={exemple}
               onChange={(e) => setExemple(e.target.value)}
               placeholder="Exemple concret d'utilisation..."
-              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+              className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none min-h-20"
             />
           </div>
 
           <div className="flex flex-col gap-1 w-full relative group">
             <label
               htmlFor="aRetenir"
-              className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+              className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
             >
               À retenir
             </label>
@@ -218,24 +218,17 @@ export default function CreateCard() {
               value={aRetenir}
               onChange={(e) => setARetenir(e.target.value)}
               placeholder="Points essentiels à retenir..."
-              className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+              className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none min-h-20"
             />
           </div>
 
-          {/** Bouton */}
-          <button
-            type="submit"
-            className="mt-4 bg-linear-to-r from-[#693382] to-[#5a2c95] text-white font-semibold p-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-          >
-            Voir un aperçu
-          </button>
         </form>
 
       </div>
 
 
-      <div className="flex flex-nowrap gap-8 mx-2 lg:mx-64">
-        <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
+      <div className="flex  flex-nowrap gap-8 mx-2 lg:mx-64">
+        <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page1Ref}
             bgSrc="/bg.png"
@@ -250,7 +243,7 @@ export default function CreateCard() {
 
         </div>
 
-        <div className={`${activePage === 2 ? "opacity-100 order-1" : "opacity-0 order-3"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
+        <div className={`${activePage === 2 ? "opacity-100 order-1" : "opacity-0 order-3"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page2Ref}
             bgSrc="/bg.png"
@@ -264,7 +257,7 @@ export default function CreateCard() {
           />
         </div>
 
-        <div className={`${activePage === 3 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
+        <div className={`${activePage === 3 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page3Ref}
             bgSrc="/bg.png"
@@ -278,7 +271,7 @@ export default function CreateCard() {
           />
         </div>
 
-        <div className={`${activePage === 4 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
+        <div className={`${activePage === 4 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page4Ref}
             bgSrc="/bg.png"
@@ -301,17 +294,17 @@ export default function CreateCard() {
             onClick={() => setActivePage(page as 1 | 2 | 3 | 4)}
             className={`px-4 py-2 rounded-lg border transition
         ${activePage === page
-                ? "bg-black text-white"
-                : "bg-white text-black"
+                ? "bg-[#0788ff] text-white"
+                : "bg-[#030d16] text-white"
               }`}
           >
             Page {page}
           </button>
         ))}
       </div>
-      <div className="lg:h-16 h-12 my-4 relative rounded-lg bg-[#693382] mx-auto w-7/8 lg:w-1/2  overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-all duration-300">
+      <div className="lg:h-16 h-12 my-4 relative rounded-lg bg-[#0788ff] mx-auto w-7/8 lg:w-1/2  overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-all duration-300">
         {/* Overlay animé */}
-        <div className="absolute top-0 left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500 ease-in-out"></div>
+        <div className="absolute top-0 left-0 w-0 h-full bg-[#030d16] group-hover:w-full transition-all duration-500 ease-in-out"></div>
 
         {/* Bouton clickable */}
         <button

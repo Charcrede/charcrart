@@ -68,13 +68,13 @@ export default function CreateCardForAll() {
 
 
     return (
-        <div className="bg-[#141414]">
+        <div className=" bg-linear-to-r from-[#07233b] to-[#050d17] py-16">
             <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
                 <form
                     action=""
-                    className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-[#1f1f1f]/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#693382]/30 text-white"
+                    className="sm:w-full lg:w-1/2 flex flex-col gap-6 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-[#0788ff]/30 text-white"
                 >
-                    <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#e0c7ff] tracking-wide">
+                    <legend className="text-2xl sm:text-3xl font-blanka text-center text-[#0788ff] tracking-wide">
                         Carte
                     </legend>
 
@@ -82,7 +82,7 @@ export default function CreateCardForAll() {
                     <div className="flex flex-col gap-1 w-full relative group">
                         <label
                             htmlFor="accroche"
-                            className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+                            className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
                         >
                             Titre
                         </label>
@@ -91,14 +91,14 @@ export default function CreateCardForAll() {
                             value={form?.titre || ""}
                             onChange={(e) => handleForm("titre", e.target.value)}
                             placeholder="Titre de la carte..."
-                            className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none"
+                            className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none"
                         />
                     </div>
 
                     <div className="flex flex-col gap-1 w-full relative group">
                         <label
                             htmlFor="exemple"
-                            className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+                            className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
                         >
                             Pied de page
                         </label>
@@ -107,14 +107,14 @@ export default function CreateCardForAll() {
                             value={form?.footer || ""}
                             onChange={(e) => handleForm("footer", e.target.value)}
                             placeholder="Pied de page de la carte..."
-                            className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none"
+                            className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none"
                         />
                     </div>
 
                     <div className="flex flex-col gap-1 w-full relative group">
                         <label
                             htmlFor="def"
-                            className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+                            className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
                         >
                             Contenue
                         </label>
@@ -123,7 +123,7 @@ export default function CreateCardForAll() {
                             value={form?.contenu || ""}
                             onChange={(e) => handleForm("contenu", e.target.value)}
                             placeholder="Contenue de la carte..."
-                            className="border-2 border-[#555] focus:border-[#693382] focus:ring-1 focus:ring-[#693382] outline-none w-full p-3 rounded-xl bg-[#252525] text-white shadow-sm transition-all duration-300 resize-none min-h-20"
+                            className="border-2 border-[#555] focus:border-[#0788ff] focus:ring-1 focus:ring-[#0788ff] outline-none w-full p-3 rounded-xl bg-white/10 text-white shadow-sm transition-all duration-300 resize-none min-h-20"
                         />
                     </div>
 
@@ -131,7 +131,7 @@ export default function CreateCardForAll() {
 
                     <div className="flex flex-col gap-1 w-full relative group">
                         <p
-                            className="text-[#a278d1] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#e0c7ff]"
+                            className="text-[#07233b] text-lg sm:text-xl font-semibold transition-all duration-300 group-focus-within:text-[#0788ff]"
                         >
                             Arrière plan
                         </p>
@@ -142,8 +142,8 @@ export default function CreateCardForAll() {
                                     type="button"
                                     onClick={() => setForm({ ...form, bgType: "image" })}
                                     className={`px-4 py-2 rounded-xl border transition-all ${form.bgType === "image"
-                                        ? "bg-[#693382] text-white border-[#693382]"
-                                        : "bg-[#252525] text-gray-400 border-[#444] hover:border-[#693382]"
+                                        ? "bg-[#0788ff] text-white border-[#0788ff]"
+                                        : "bg-white/10 text-gray-400  hover:border-[#0788ff]"
                                         }`}
                                 >
                                     Image
@@ -153,8 +153,8 @@ export default function CreateCardForAll() {
                                     type="button"
                                     onClick={() => setForm({ ...form, bgType: "color" })}
                                     className={`px-4 py-2 rounded-xl border transition-all ${form.bgType === "color"
-                                        ? "bg-[#693382] text-white border-[#693382]"
-                                        : "bg-[#252525] text-gray-400 border-[#444] hover:border-[#693382]"
+                                        ? "bg-[#0788ff] text-white border-[#0788ff]"
+                                        : "bg-white/10 text-gray-400  hover:border-[#0788ff]"
                                         }`}
                                 >
                                     Couleur
@@ -173,7 +173,7 @@ export default function CreateCardForAll() {
                                             if (!file) return
                                             setForm({ ...form, bgImage: URL.createObjectURL(file) })
                                             }}
-                                        className="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-[#693382] file:text-white hover:file:bg-[#5a2c95] cursor-pointer"
+                                        className="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-[#0788ff] file:text-white hover:file:bg-[#07233b] cursor-pointer"
                                     />
                                 </label>
                             ) : (
@@ -198,12 +198,12 @@ export default function CreateCardForAll() {
             </div>
 
 
-            <div className="flex flex-nowrap gap-8 mx-2 lg:mx-64">
-                <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-5xl w-4/5 flex flex-col`}>
+            <div className="flex justify-center gap-8 mx-2 lg:mx-auto mt-0 lg:mt-16 transition-all duration-500">
+                <div className={`lg:min-w-3xl w-full md:w-1/4 flex flex-col`}>
                     <TextCardForAll
                         pageRef={page1Ref}
                         bgSrc="/bg.png"
-                        jour={10}
+                        jour={10}   
                         titre={form.titre}
                         texte={form.contenu}
                         texteSize={retSize}
@@ -215,7 +215,7 @@ export default function CreateCardForAll() {
                 </div>
 
             </div>
-            <div className="lg:h-16 h-12 my-4 relative rounded-lg bg-[#693382] mx-auto w-7/8 lg:w-1/2  overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="lg:h-16 h-12 my-4 relative rounded-lg bg-[#0788ff] mx-auto w-7/8 lg:w-1/2  overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-all duration-300">
                 {/* Overlay animé */}
                 <div className="absolute top-0 left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-500 ease-in-out"></div>
 

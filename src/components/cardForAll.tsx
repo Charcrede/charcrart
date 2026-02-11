@@ -45,7 +45,7 @@ export const TextCardForAll: React.FC<TextCardProps> = ({
         <div>
 
 
-            <div ref={pageRef} className="relative rounded-xl overflow-hidden" style={{backgroundColor : config.background === "color" ? config.backgroundValue : undefined}}>
+            <div ref={pageRef} className="relative mx-auto rounded-xl overflow-hidden" style={{backgroundColor : config.background === "color" ? config.backgroundValue : undefined}}>
                 {config.background === "image" && (
                     <img src={config.backgroundValue} className="rounded-xl" alt="background1" onClick={()=>{console.log(config.backgroundValue)}}/>
                 )}
@@ -75,7 +75,7 @@ export const TextCardForAll: React.FC<TextCardProps> = ({
             <div className="flex flex-col gap-3 mt-4 justify-center bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-md">
                 <label
                     htmlFor="texteSize"
-                    className="text-sm font-semibold tracking-wide text-[#693382]"
+                    className="text-sm font-semibold tracking-wide text-[#0788ff]"
                 >
                     Taille du texte
                 </label>
@@ -92,7 +92,7 @@ export const TextCardForAll: React.FC<TextCardProps> = ({
 
                 <div className="flex items-center justify-between text-xs">
                     <span className="text-gray-400">0px</span>
-                    <span className="px-3 py-1 rounded-full bg-[#693382] text-white font-semibold">
+                    <span className="px-3 py-1 rounded-full bg-[#0788ff] text-white font-semibold">
                         {texteSize}px
                     </span>
                     <span className="text-gray-400">100px</span>

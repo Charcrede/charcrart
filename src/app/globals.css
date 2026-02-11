@@ -3,6 +3,7 @@
 @import url('../fonts/handwritten-2/style.css');
 @import url('../fonts/linotype/style.css');
 @import url('../fonts/edusa/style.css');
+@import url('../fonts/spaceGrotesk/css/space-grotesk.css');
 @import "tailwindcss";
 
 
@@ -10,6 +11,10 @@
 
 .font-blanka {
   font-family: 'blanka', sans-serif;
+}
+
+.font-space {
+  font-family: 'SpaceGrotesk-Regular', sans-serif;
 }
 
 .font-poppins {
@@ -29,7 +34,7 @@
 }
 
 body {
-  background: #1b1b1b;
+  background: linear-gradient(to right, #07233b, #050d17);
   color:#f0f0f0;
   font-family: poppins, Helvetica, sans-serif;
 }
@@ -65,8 +70,8 @@ button {
   border-radius: 999px;
   background: linear-gradient(
     to right,
-    #693382 0%,
-    #693382 var(--value, 50%),
+    #0788ff 0%,
+    #0788ff var(--value, 50%),
     #e5e5e5 var(--value, 50%),
     #e5e5e5 100%
   );
@@ -81,7 +86,7 @@ button {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #693382;
+  background: #0788ff;
   border: 3px solid white;
   cursor: pointer;
   transition: transform 0.15s ease;
@@ -96,7 +101,7 @@ button {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #693382;
+  background: #0788ff;
   border: 3px solid white;
   cursor: pointer;
 }

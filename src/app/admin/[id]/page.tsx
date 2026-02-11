@@ -32,7 +32,7 @@ export default function Login() {
 
 
   return (
-    <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[#141414]">
+    <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8  bg-linear-to-r from-[#07233b] to-[#050d17]">
         <form action="" className="sm:w-full lg:w-1/2 flex flex-col gap-6">
         <legend>Terme : </legend>
             <div className="flex flex-col gap-4 w-full">

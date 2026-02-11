@@ -2,36 +2,37 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#141414] text-white font-poppins">
+    <main className="min-h-screen  bg-linear-to-r from-[#07233b] to-[#050d17] text-white font-poppins">
       {/* HERO */}
       <section className="min-h-[80vh] flex flex-col items-center justify-center px-6 text-center gap-6">
-  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-blanka text-white leading-tight">
-    Génère des cartes<br />
-    <span className="text-[#693382]">visuelles claires</span>
-  </h1>
+        <h1 className="text-4xl md:text-6xl font-black mb-6 font-blanka">Génère des cartes <br className="hidden md:block" />
+          <p className="text-[#0788ff]">
+            visuelles claires
+          </p>
+        </h1>
 
-  <p className="max-w-2xl text-gray-400 text-base sm:text-lg">
-    Transforme n’importe quel concept, terme ou idée
-    <br />
-    en une carte visuelle propre, lisible et partageable,
-    <br />
-    sans outils complexes ni templates lourds.
-  </p>
+        <p className="max-w-2xl text-gray-400 text-base sm:text-lg">
+          Transforme n’importe quel concept, terme ou idée
+          <br />
+          en une carte visuelle propre, lisible et partageable,
+          <br />
+          sans outils complexes ni templates lourds.
+        </p>
 
-  <div className="flex gap-4 mt-4 flex-wrap justify-center">
-    <Link
-      href="/card"
-      className="px-6 py-3 rounded-xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
-    >
-      Créer une carte
-    </Link>
+        <div className="flex gap-4 mt-4 flex-wrap justify-center">
+          <Link
+            href="/card"
+            className="px-6 py-3 rounded-xl bg-[#0788ff] text-white font-semibold hover:scale-105 transition-transform"
+          >
+            Créer une carte
+          </Link>
 
-  </div>
-</section>
+        </div>
+      </section>
 
 
       {/* PREVIEW */}
-      <section className="px-6 py-16 max-w-6xl mx-auto">
+      <section className="px-6 max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-blanka text-center mb-10">
           Le format
         </h2>
@@ -119,7 +120,7 @@ export default function HomePage() {
 
         <Link
           href="/card"
-          className="inline-block mt-4 px-8 py-4 rounded-2xl bg-[#693382] text-white font-semibold hover:scale-105 transition-transform"
+          className="inline-block mt-4 px-8 py-4 rounded-2xl bg-[#0788ff] text-white font-semibold hover:scale-105 transition-transform"
         >
           Commencer
         </Link>
@@ -137,7 +138,7 @@ function StepCard({
 }) {
   return (
     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all">
-      <h3 className="font-blanka text-xl mb-3 text-[#693382]">
+      <h3 className="font-blanka text-xl mb-3 text-[#0788ff]">
         {title}
       </h3>
       <p className="text-gray-400 text-sm">{description}</p>

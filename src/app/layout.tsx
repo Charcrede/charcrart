@@ -46,30 +46,30 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-                  <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b-2 border-[#693382]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Logo / Home Link */}
-        <Link
-          href="/"
-          className="text-[#f0f0f0] text-3xl font-serif font-light font-blanka hover:scale-105 duration-500 tracking-wide hover:text-accent transition-colors"
-        >
-          LINKCARD
-        </Link>
+        <header className="sticky top-0 z-50 bg-tranparent backdrop-blur-sm border-b-2 border-[#0788ff]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            {/* Logo / Home Link */}
+            <Link
+              href="/"
+              className="text-[#f0f0f0] text-3xl font-serif font-light font-blanka hover:scale-105 duration-500 tracking-wide hover:text-accent transition-colors"
+            >
+              LINKCARD
+            </Link>
 
 
-        {/* Dark Mode Toggle & Mobile Menu Button */}
-        <div className="flex items-center gap-2">
-          <Link
-            href="/admin"
-            className="p-2 rounded hover:bg-secondary transition-colors"
-            title="Admin"
-          >
-            <Lock className="w-5 h-5 text-white" />
-          </Link>
-        </div>
-      </div>
+            {/* Dark Mode Toggle & Mobile Menu Button */}
+            <div className="flex items-center gap-2">
+              <Link
+                href="/admin"
+                className="p-2 rounded hover:bg-secondary transition-colors"
+                title="Admin"
+              >
+                <Lock className="w-5 h-5 text-white" />
+              </Link>
+            </div>
+          </div>
 
-    </header>
+        </header>
         {children}
       </body>
     </html>

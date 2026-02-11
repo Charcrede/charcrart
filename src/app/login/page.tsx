@@ -50,7 +50,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[#141414]">
+    <div className="font-poppins min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8  bg-linear-to-r from-[#07233b] to-[#050d17]">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-4">
@@ -91,7 +91,7 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className=" font-medium text-xl w-full px-4 py-2 z-10 text-black bg-white hover:text-white border-2 border-white hover:bg-[#141414] cursor-pointer rounded group-hover:text-white transition-colors duration-500"
+            className=" font-medium text-xl w-full px-4 py-2 z-10 text-black bg-white hover:text-white border-2 border-white hover: bg-linear-to-r from-[#07233b] to-[#050d17] cursor-pointer rounded group-hover:text-white transition-colors duration-500"
           >
             Se connecter
           </button>

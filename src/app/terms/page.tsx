@@ -60,7 +60,7 @@ export default function Terms() {
           {terms.map(term => (
             <div
               key={term.id}
-              className="bg-[#1f1f1f] p-4 rounded-xl mb-4 relative shadow-lg border border-[#693382]/20 hover:shadow-2xl transition-all duration-300"
+              className="bg-[#1f1f1f] p-4 rounded-xl mb-4 relative shadow-lg border border-[#0788ff]/20 hover:shadow-2xl transition-all duration-300"
             >
               {/* Badge Traité / Non traité */}
               <span
@@ -78,8 +78,8 @@ export default function Terms() {
 
                 <div className="flex justify-end mt-4 gap-3">
                   {/* Bouton Voir plus */}
-                  <div className="flex-1 h-12 bg-[#141414] border border-[#693382] rounded-lg overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="absolute top-0 left-0 w-0 h-full bg-[#693382] group-hover:w-full transition-all duration-500 ease-in-out"></div>
+                  <div className="flex-1 h-12  bg-linear-to-r from-[#07233b] to-[#050d17] border border-[#0788ff] rounded-lg overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="absolute top-0 left-0 w-0 h-full bg-[#0788ff] group-hover:w-full transition-all duration-500 ease-in-out"></div>
                     <Link
                       href={`/admin/${term.id}`}
                       className="relative z-10 w-full h-full flex items-center justify-center gap-2 text-white group-hover:text-black font-semibold transition-colors duration-500"
