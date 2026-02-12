@@ -49,7 +49,7 @@ export const TextCard: React.FC<TextCardProps> = ({
                 {config.background === "image" && (
                     <img src={config.backgroundValue} className="rounded-xl" alt="background1" />
                 )}
-                <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0"></div>
+                <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 bg-black opacity-70"></div>
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 p-10 text-white flex flex-col gap-6 justify-center">
                         <p style={{ fontSize: `${useResponsiveFont(36, pageRef)}px` }} className=" font-blanka absolute top-[8%] left-[8%]">
                             Jour {jour}
