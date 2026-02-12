@@ -199,7 +199,7 @@ export default function CreateCardForAll() {
 
 
             <div className="flex justify-center gap-8 mx-2 lg:mx-auto mt-0 lg:mt-16 transition-all duration-500">
-                <div className={`lg:min-w-3xl w-full md:w-1/4 flex flex-col`}>
+                <div className={`lg:min-w-[64rem] w-full md:w-1/4 flex flex-col`}>
                     <TextCardForAll
                         pageRef={page1Ref}
                         bgSrc="/bg.png"

@@ -228,7 +228,7 @@ export default function CreateCard() {
 
 
       <div className="flex  flex-nowrap gap-8 mx-2 lg:mx-64">
-        <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
+        <div className={`${activePage === 1 ? "opacity-100 order-1" : "opacity-0 order-2"} min-w-full lg:min-w-[64rem] mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page1Ref}
             bgSrc="/bg.png"
@@ -243,7 +243,7 @@ export default function CreateCard() {
 
         </div>
 
-        <div className={`${activePage === 2 ? "opacity-100 order-1" : "opacity-0 order-3"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
+        <div className={`${activePage === 2 ? "opacity-100 order-1" : "opacity-0 order-3"} min-w-full lg:min-w-[64rem] mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page2Ref}
             bgSrc="/bg.png"
@@ -257,7 +257,7 @@ export default function CreateCard() {
           />
         </div>
 
-        <div className={`${activePage === 3 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
+        <div className={`${activePage === 3 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-[64rem] mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page3Ref}
             bgSrc="/bg.png"
@@ -271,7 +271,7 @@ export default function CreateCard() {
           />
         </div>
 
-        <div className={`${activePage === 4 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-3xl mt-8 w-4/5 flex flex-col`}>
+        <div className={`${activePage === 4 ? "opacity-100 order-1" : "opacity-0 order-4"} min-w-full lg:min-w-[64rem] mt-8 w-4/5 flex flex-col`}>
           <TextCard
             pageRef={page4Ref}
             bgSrc="/bg.png"
