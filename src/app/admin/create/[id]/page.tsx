@@ -237,7 +237,7 @@ export default function CreateCard() {
             texte={accroche}
             texteSize={retSize}
             setTexteSize={setRetSize}
-            footer="#1JOUR1TERME"
+          footer="Abonne toi !"
             config={config}
           />
 
@@ -252,7 +252,7 @@ export default function CreateCard() {
             texte={def}
             texteSize={defSize}
             setTexteSize={setDefSize}
-            footer="#1JOUR1TERME"
+          footer="Abonne toi !"
             config={config}
           />
         </div>
@@ -266,7 +266,7 @@ export default function CreateCard() {
             texte={exemple}
             texteSize={exSize}
             setTexteSize={setExSize}
-            footer="#1JOUR1TERME"
+          footer="Abonne toi !"
             config={config}
           />
         </div>
@@ -280,7 +280,7 @@ export default function CreateCard() {
             texte={aRetenir}
             texteSize={retSize}
             setTexteSize={setRetSize}
-            footer="#1JOUR1TERME"
+          footer="Abonne toi !"
             config={config}
           />
 

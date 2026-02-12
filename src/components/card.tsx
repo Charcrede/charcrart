@@ -61,12 +61,12 @@ export const TextCard: React.FC<TextCardProps> = ({
                     >
                         {texte}
                     </p>
-                    {/* <p
+                    <p
                         style={{ fontSize: `${useResponsiveFont(21, pageRef)}px` }}
                         className="font-poppins font-normal text-center left-[5%] text-gray-100 right-[5%] absolute bottom-[4.5%]"
                     >
                         {footer}
-                    </p> */}
+                    </p>
                 </div>
 
             </div>
