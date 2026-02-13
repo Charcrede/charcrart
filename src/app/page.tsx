@@ -43,16 +43,7 @@ export default function HomePage() {
               key={i}
               className="relative rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black"
             >
-              <img src="/bg.png" alt="preview" />
-              <div className="absolute inset-0 p-4 flex flex-col justify-center text-center">
-                <p className="font-blanka text-sm absolute top-4 left-4">
-                  Jour {i}
-                </p>
-                <h3 className="font-blanka text-xl mb-2">API</h3>
-                <p className="font-edusa text-sm text-gray-200">
-                  Une interface qui permet à deux systèmes de communiquer.
-                </p>
-              </div>
+              <img src={"Titre_" + i + ".png"} alt="preview" />
             </div>
           ))}
         </div>
