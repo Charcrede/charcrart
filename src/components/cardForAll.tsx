@@ -47,7 +47,7 @@ export const TextCardForAll: React.FC<TextCardProps> = ({
 
             <div ref={pageRef} className="relative mx-auto rounded-xl overflow-hidden" style={{backgroundColor : config.background === "color" ? config.backgroundValue : undefined}}>
                 {config.background === "image" && (
-                    <img src={config.backgroundValue} className="rounded-xl" alt="background1" onClick={()=>{console.log(config.backgroundValue)}}/>
+                    <img src={config.backgroundValue} className="rounded-xl w-full" alt="background1" onClick={()=>{console.log(config.backgroundValue)}}/>
                 )}
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 bg-black opacity-70"></div>
                 <div className="w-full h-full absolute top-0 bottom-0 left-0 right-0 p-10 text-white flex flex-col gap-6 justify-center">
@@ -59,7 +59,7 @@ export const TextCardForAll: React.FC<TextCardProps> = ({
                     <h2 style={{ fontSize: `${useResponsiveFont(config.titleSize ? config.titleSize : 45, pageRef)}px` }} className="mb-4 font-blanka text-center left-[5%] right-[5%] absolute top-[10%]">{titre}</h2>
                     <p
                         style={{ fontSize: `${useResponsiveFont(texteSize, pageRef)}px` }}
-                        className="font-edusa font-normal text-center left-[5%] right-[5%] absolute top-[30%]"
+                        className="font-edusa font-normal text-center left-[5%] right-[5%] absolute top-[30%] whitespace-pre-line"
                     >
                         {texte}
                     </p>
